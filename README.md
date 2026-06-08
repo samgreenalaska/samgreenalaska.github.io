@@ -25,26 +25,6 @@ assets/resume.pdf  Public resume (downloads as "Sam Green - Resume.pdf")
 photos/            Site images (compressed JPEGs)
 ```
 
-## Preview locally
-
-From this folder:
-
-```
-npx -y serve . -l 8123
-```
-
-Then open http://localhost:8123
-
-## Publish changes
-
-```
-git add .
-git commit -m "describe what changed"
-git push
-```
-
-GitHub Pages rebuilds automatically in a minute or two.
-
 ## Contact form
 
 The interview modal posts to Web3Forms (a serverless form backend that works on static
