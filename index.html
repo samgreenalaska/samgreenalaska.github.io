@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="hero__photo">
-          <img src="photos/Profile%20Photo%20Professional.png" alt="Portrait of Sam Green, Senior Installation Engineer">
+          <img src="photos/Profile%20Photo%20Professional.jpg" alt="Portrait of Sam Green, Senior Installation Engineer">
         </div>
       </div>
     </section>
@@ -55,17 +55,21 @@
     <!-- ===== Credibility snapshot ===== -->
     <section class="section section--tight">
       <div class="container">
-        <div class="grid grid--3">
+        <div class="grid grid--4">
           <div class="card card--stat">
-            <div class="stat__num">7+</div>
-            <div class="stat__label">Years in oil &amp; gas execution (Hilcorp &amp; TechnipFMC)</div>
+            <div class="stat__num">0</div>
+            <div class="stat__label">Recordable safety incidents, career to date</div>
+          </div>
+          <div class="card card--stat">
+            <div class="stat__num"><span id="years-exp">8+</span></div>
+            <div class="stat__label">Years in oil &amp; gas</div>
           </div>
           <div class="card card--stat">
             <div class="stat__num">10</div>
             <div class="stat__label">Documented subsea campaigns: 7 offshore, 3 system-integration</div>
           </div>
           <div class="card card--stat">
-            <div class="stat__num">3.86</div>
+            <div class="stat__num">3.9</div>
             <div class="stat__label">B.S. Petroleum Engineering, UAF. Magna Cum Laude</div>
           </div>
         </div>
@@ -77,7 +81,7 @@
       <div class="container">
         <span class="eyebrow">Why Alaska oil &amp; gas</span>
         <h2>Built for remote, harsh, high-consequence work</h2>
-        <p class="lead mb-2">My hands-on record is deepwater subsea in the Gulf of Mexico. The environment differs from the North Slope, but the discipline transfers directly. Offshore intervention runs on the same things Alaska operations demand: meticulous planning, ownership of execution, and reliability when conditions are unforgiving and help is far away.</p>
+        <p class="lead mb-2">My career started in Alaska oil and gas, with field engineering on the Kenai Peninsula, and grew into the highest-consequence work in the industry: deepwater subsea intervention in the Gulf of Mexico. The environments differ, but the discipline is the same one Alaska operations demand: meticulous planning, ownership of execution, and reliability when conditions are unforgiving and help is far away. I'm bringing that full arc back home to the North Slope and pipeline.</p>
 
         <div class="grid grid--3" style="margin-top:1.5rem;">
           <div class="card">
@@ -95,7 +99,7 @@
         </div>
 
         <div class="pitch" style="margin-top:1.75rem;">
-          <p class="mb-0"><strong>Alaska connection:</strong> I'm a Big Lake resident and a University of Alaska Fairbanks Petroleum Engineering graduate. For Alaska employers that means a local hire who already knows the state, the industry, and the demands of remote work, ready to deploy without relocation risk.</p>
+          <p class="mb-0"><strong>Alaska connection:</strong> I came up in this industry in Alaska. I hold a Petroleum Engineering degree from the University of Alaska Fairbanks, ran my field engineering internships with Hilcorp Alaska in Kenai, and live in Big Lake today. For Alaska employers that means a local hire who already knows the state, the work, and the demands of remote operations, ready to deploy without relocation risk.</p>
         </div>
       </div>
     </section>
@@ -118,6 +122,23 @@
         <div class="btn-row">
           <a class="btn btn--steel" href="capabilities.html">See full capabilities</a>
           <a class="btn btn--steel" href="experience.html">View experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Off the clock ===== -->
+    <section class="section section--ice">
+      <div class="container">
+        <span class="eyebrow">Off the clock</span>
+        <h2>An Alaskan, on and off the job</h2>
+        <p class="lead maxw-prose">When I'm not on a job, I'm usually on the snow or the trail. I ride snowmachines through Alaska winters and hike the backcountry in summer. It is the same cold, distance, and self-reliance that field work up here runs on, and a big part of why I want to build my career in Alaska.</p>
+        <div class="grid grid--2" style="margin-top:1.5rem;">
+          <figure class="photo-tile">
+            <img src="photos/Sam%20Green%20Snowmachine.jpg" alt="Sam Green snowmachining on a snow-covered field in Alaska">
+          </figure>
+          <figure class="photo-tile">
+            <img src="photos/Sam%20Green%20Hiking.jpg" alt="Sam Green hiking on a boulder below snow-capped Alaska peaks">
+          </figure>
         </div>
       </div>
     </section>
@@ -163,5 +184,18 @@
 
   <script src="js/nav.js"></script>
   <script src="js/interview.js"></script>
+  <script>
+    /* Auto-update years of oil & gas experience.
+       Full-time since June 2019, plus 12 months of oil & gas field internships. */
+    (function () {
+      var el = document.getElementById("years-exp");
+      if (!el) return;
+      var start = new Date(2019, 5, 1); // June 2019
+      var now = new Date();
+      var ftMonths = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+      var years = Math.floor((ftMonths + 12) / 12);
+      if (years > 0) el.textContent = years + "+";
+    })();
+  </script>
 </body>
 </html>
