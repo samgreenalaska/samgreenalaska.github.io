@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Sam Green | Capabilities One-Pager</title>
+  <meta name="description" content="Capabilities one-pager for Sam Green, Senior Installation Engineer, Big Lake, Alaska. Transferable strengths and proof points for Alaska oil and gas hiring decision-makers.">
+  <style>
+    :root {
+      --navy: #0f2435;
+      --steel: #2b6a8f;
+      --ink: #1c2733;
+      --ink-mut: #44546a;
+      --line: #d7e0e7;
+      --ice: #e8f0f5;
+      --amber: #b76d18;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #6b7785;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.35;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* On screen the sheet mirrors the printable content box of a US Letter page
+       (8.5in wide minus 0.4in margins each side). Print rules below switch it
+       to flow naturally inside the @page margins. */
+    .sheet {
+      width: 7.7in;
+      min-height: 10.2in;
+      margin: 0.4in auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header band ---- */
+    .masthead {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.26in 0.34in 0.2in;
+    }
+    .masthead h1 {
+      margin: 0;
+      font-size: 23pt;
+      letter-spacing: 0.01em;
+      line-height: 1.02;
+    }
+    .masthead .role {
+      margin: 0.05in 0 0;
+      font-size: 10.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #8fb7d0;
+      font-weight: 600;
+    }
+    .masthead .contact {
+      margin: 0.12in 0 0;
+      font-size: 9.5pt;
+      color: #cfe0ec;
+    }
+    .masthead .contact a { color: #cfe0ec; text-decoration: none; }
+    .masthead .contact span { color: #5d7d95; padding: 0 0.05in; }
+
+    /* ---- Positioning line ---- */
+    .positioning {
+      padding: 0.12in 0.34in;
+      border-bottom: 2px solid var(--line);
+      font-size: 10.5pt;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.32;
+    }
+    .positioning .pin { color: var(--steel); }
+
+    /* ---- Body ---- */
+    .body {
+      padding: 0.14in 0.34in 0.04in;
+      flex: 1;
+    }
+
+    .eyebrow {
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--steel);
+      font-weight: 700;
+      margin: 0 0 0.09in;
+    }
+    section { margin-bottom: 0.13in; }
+
+    /* Transferable strengths grid */
+    .strengths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.05in 0.34in;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .strengths li {
+      position: relative;
+      padding-left: 0.24in;
+      font-size: 9.3pt;
+      line-height: 1.26;
+      break-inside: avoid;
+    }
+    .strengths li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.035in;
+      width: 0.12in;
+      height: 0.12in;
+      background: var(--steel);
+      border-radius: 2px;
+    }
+    .strengths strong { color: var(--navy); }
+
+    /* Proof points */
+    .proofs { display: flex; flex-direction: column; gap: 0.08in; }
+    .proof {
+      border-left: 3px solid var(--steel);
+      background: var(--ice);
+      padding: 0.1in 0.16in;
+      break-inside: avoid;
+    }
+    .proof h3 {
+      margin: 0 0 0.03in;
+      font-size: 10pt;
+      color: var(--navy);
+    }
+    .proof .ctx {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--ink-mut);
+      font-weight: 700;
+      margin: 0 0 0.04in;
+    }
+    .proof p { margin: 0; font-size: 9.2pt; line-height: 1.27; }
+    .proof .result { color: var(--amber); font-weight: 700; }
+
+    /* ---- Footer / CTA ---- */
+    .cta {
+      margin-top: auto;
+      background: var(--navy);
+      color: #fff;
+      padding: 0.17in 0.34in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.3in;
+    }
+    .cta__text h2 {
+      margin: 0 0 0.05in;
+      font-size: 13pt;
+      color: #fff;
+    }
+    .cta__text p {
+      margin: 0;
+      font-size: 9.3pt;
+      color: #cfe0ec;
+      max-width: 4.6in;
+    }
+    .cta__text .links { margin-top: 0.08in; font-size: 9.5pt; font-weight: 700; color: #fff; max-width: none; white-space: nowrap; }
+    .cta__qr {
+      flex-shrink: 0;
+      background: #fff;
+      padding: 0.07in;
+      border-radius: 4px;
+      width: 0.95in;
+      height: 0.95in;
+    }
+    .cta__qr svg { display: block; width: 100%; height: 100%; }
+    .cta__qr-cap {
+      font-size: 6.5pt;
+      text-align: center;
+      color: #cfe0ec;
+      margin-top: 0.03in;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---- Print rules ---- */
+    @page {
+      size: letter;
+      margin: 0.4in;
+    }
+    @media print {
+      html, body { background: #fff; }
+      .sheet {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+
+    <!-- Header -->
+    <header class="masthead">
+      <h1>Sam Green</h1>
+      <p class="role">Senior Installation Engineer</p>
+      <p class="contact">
+        <a href="tel:+19072328085">907-232-8085</a><span>&bull;</span>
+        <a href="mailto:samgreenalaska@gmail.com">samgreenalaska@gmail.com</a><span>&bull;</span>
+        <a href="https://samgreenalaska.github.io">samgreenalaska.github.io</a>
+      </p>
+    </header>
+
+    <!-- Positioning -->
+    <p class="positioning">
+      <span class="pin">Alaska local hire and UAF Petroleum Engineering graduate</span>
+      who plans and executes high-consequence subsea operations, bringing deepwater
+      installation and intervention discipline home to Alaska oil and gas, in the field or
+      the office: North Slope, Cook Inlet, remote sites, and Anchorage-area engineering teams.
+    </p>
+
+    <div class="body">
+
+      <!-- Transferable strengths -->
+      <section aria-labelledby="strengths-h">
+        <h2 class="eyebrow" id="strengths-h">Transferable strengths for Alaska oil &amp; gas</h2>
+        <ul class="strengths">
+          <li><strong>Remote, high-consequence execution.</strong> Lead operations where weather, pressure, and isolation leave no margin, the same constraints as Alaska field work on the Slope, in Cook Inlet, and at remote sites.</li>
+          <li><strong>Project ownership end to end.</strong> Planning, equipment readiness, logistics, and scheduling to land people, tools, and procedures at a remote site on time.</li>
+          <li><strong>HSE discipline.</strong> JSAs, process hazard analyses, Stop Work Authority, and API 6A / 17D standards. Zero recordable incidents to date.</li>
+          <li><strong>Cross-discipline coordination.</strong> Direct offshore crews, ROV teams, contractors, and operators through complex multi-day campaigns.</li>
+          <li><strong>Commissioning &amp; startup.</strong> Pre-installation readiness through commissioning and contingency ops on trees, jumpers, leads, and controls.</li>
+          <li><strong>Production &amp; cost optimization.</strong> Surveillance, artificial lift, and workover programs that raise output and cut operating cost on live fields.</li>
+        </ul>
+      </section>
+
+      <!-- Proof points -->
+      <section aria-labelledby="proof-h">
+        <h2 class="eyebrow" id="proof-h">Proof of execution</h2>
+        <div class="proofs">
+
+          <div class="proof">
+            <p class="ctx">Deepwater subsea &middot; major IOC operators</p>
+            <h3>Cut landing-string project lead time by 50%</h3>
+            <p>Planned and ran offshore well intervention and installation for high-pressure subsea systems. Drove a Management of Change initiative that <span class="result">halved landing-string lead time</span> with no loss of safety or compliance, across deepwater tree recovery and multi-day hydrate remediation campaigns.</p>
+          </div>
+
+          <div class="proof">
+            <p class="ctx">Kenai Peninsula production &middot; Alaska</p>
+            <h3>Cut field operating expense by $165k / year</h3>
+            <p>Field engineering on a week-on / week-off rotation. A capillary-string emulsion chemical treatment <span class="result">cut operating expense by $165k per year</span> while holding production, and re-prioritizing high-yield inlet gas added about $118k/year in NGL sales at a remote gas plant.</p>
+          </div>
+
+          <div class="proof">
+            <p class="ctx">Gulf Coast production operations</p>
+            <h3>240% production increase; ~$10M storm restoration</h3>
+            <p>Owned field optimization end to end: drove a <span class="result">240% production increase</span> (250 to 600 BOE/d) through sourcing, workovers, and re-completions, and restored hurricane-damaged fields for <span class="result">$10M in value added</span> by eliminating buy-back gas.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CTA / Footer -->
+    <footer class="cta">
+      <div class="cta__text">
+        <h2>Let's talk about your Alaska operation</h2>
+        <p>If you're hiring for installation, commissioning, field execution, or office engineering in Alaska oil and gas, let's talk.</p>
+        <p class="links">907-232-8085 &nbsp;&bull;&nbsp; samgreenalaska@gmail.com &nbsp;&bull;&nbsp; samgreenalaska.github.io</p>
+      </div>
+      <div>
+        <div class="cta__qr" role="img" aria-label="QR code linking to samgreenalaska.github.io">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges" aria-hidden="true"><path fill="#ffffff" d="M0 0h37v37H0z"/><path stroke="#000000" d="M4 4.5h7m1 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h7M4 5.5h1m5 0h1m3 0h1m2 0h2m1 0h3m1 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h7m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m2 0h3m2 0h1m2 0h2m3 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m2 0h1m1 0h5m1 0h2m3 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m1 0h1m1 0h2m3 0h1m1 0h2m1 0h1m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 11.5h2m3 0h3m1 0h2M4 12.5h1m1 0h1m3 0h2m1 0h1m3 0h2m5 0h1m2 0h1m2 0h1m1 0h1M4 13.5h3m1 0h2m1 0h3m1 0h4m2 0h1m1 0h5m3 0h2M4 14.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h3m1 0h2m2 0h2m1 0h1M6 15.5h4m1 0h1m1 0h1m2 0h2m4 0h2m2 0h2m1 0h1M4 16.5h2m1 0h2m1 0h1m1 0h1m3 0h2m1 0h2m2 0h1m2 0h2m4 0h1M4 17.5h1m1 0h2m7 0h1m4 0h1m1 0h3m1 0h2m3 0h2M4 18.5h4m2 0h1m1 0h1m1 0h5m1 0h2m1 0h1m2 0h1m1 0h1m3 0h1M7 19.5h3m1 0h6m1 0h3m4 0h1m1 0h2M5 20.5h1m2 0h1m1 0h2m3 0h1m1 0h2m1 0h1m2 0h2m1 0h2m4 0h1M5 21.5h1m3 0h1m1 0h2m4 0h2m2 0h1m1 0h2m1 0h2m2 0h3M4 22.5h3m3 0h1m8 0h1m1 0h4m1 0h1m1 0h2m2 0h1M6 23.5h1m1 0h1m3 0h1m2 0h1m1 0h1m1 0h2m3 0h2M4 24.5h2m2 0h3m2 0h3m1 0h1m2 0h1m3 0h6m1 0h1M12 25.5h1m3 0h1m2 0h2m1 0h1m1 0h1m3 0h3m1 0h1M4 26.5h7m1 0h8m1 0h1m2 0h1m1 0h1m1 0h1m3 0h1M4 27.5h1m5 0h1m3 0h3m1 0h1m3 0h3m3 0h1M4 28.5h1m1 0h3m1 0h1m3 0h5m1 0h1m2 0h7m1 0h2M4 29.5h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h3m2 0h1m1 0h1m2 0h3m1 0h1M4 30.5h1m1 0h3m1 0h1m1 0h4m1 0h4m1 0h4m2 0h1m2 0h2M4 31.5h1m5 0h1m3 0h2m2 0h3m3 0h6M4 32.5h7m1 0h1m1 0h5m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1"/></svg>
+        </div>
+        <div class="cta__qr-cap">Scan for full portfolio</div>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
