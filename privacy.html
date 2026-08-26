@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Privacy Policy | gmail-mcp</title>
+  <meta name="description" content="Privacy policy for gmail-mcp, a personal Gmail automation tool operated by Sam Green.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Sam Green</span>
+        <span class="brand__role">Senior Installation Engineer</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li class="nav__cta"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="section section--navy section--tight">
+      <div class="container">
+        <span class="eyebrow">Privacy</span>
+        <h2>Privacy policy for gmail-mcp</h2>
+        <p class="lead" style="color:#cfe0ec;">gmail-mcp is a personal tool. It connects Sam Green's own Gmail accounts to a server he operates himself. It has no other users, it is not offered as a product, and no one else can sign in to it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="maxw-prose">
+
+        <h3>What it accesses</h3>
+        <p>The application requests the Google <code>https://mail.google.com/</code> scope for four Gmail accounts, all belonging to the operator. That scope allows reading, composing, sending, labelling and deleting mail. The tool uses it to search threads, read message bodies, list and change labels, and create drafts.</p>
+
+        <h3>Where the data goes</h3>
+        <p>Mail is fetched from the Gmail API on demand by a server the operator runs on his own cloud instance. It is passed straight back to whichever client asked for it. In normal use that client is Claude, an AI assistant made by Anthropic, so message content included in a request reaches Anthropic and is handled under Anthropic's own privacy terms.</p>
+        <p>Mail is not sent anywhere else. It is not sold, shared, published, or used for advertising, and no third party is given access to it.</p>
+
+        <h3>What is stored</h3>
+        <p>The server stores one Google OAuth refresh token per account, so it can reconnect without a fresh sign-in. It also stores the OAuth client credentials for the project. Both are kept on disk with owner-only permissions, and every request to the server must carry a shared secret.</p>
+        <p>Message content is not stored. Nothing is written to a database, a log of message bodies, or a cache that outlives the request.</p>
+
+        <h3>Analytics</h3>
+        <p>This page carries no analytics. Other pages on this site use PostHog to count visits, and that tracking never touches mail data or the application.</p>
+
+        <h3>Revoking access</h3>
+        <p>Access can be withdrawn at any time from <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">the Google Account permissions page</a>. Removing the application there invalidates its tokens immediately. Deleting the stored token files on the server has the same effect from the other direction.</p>
+
+        <h3>Limited use</h3>
+        <p>Use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+        <h3>Contact</h3>
+        <p>Questions about this policy go to <a href="mailto:samgreenalaska@gmail.com">samgreenalaska@gmail.com</a>.</p>
+
+        <p style="margin-top:2rem;color:var(--ink-soft);font-size:0.95rem;">Last updated 26 August 2026.</p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__name">Sam Green</div>
+        <div>Senior Installation Engineer &middot; Big Lake, Alaska</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <div><a href="mailto:samgreenalaska@gmail.com">samgreenalaska@gmail.com</a></div>
+        <div><a href="tel:+19072328085">907-232-8085</a></div>
+        <div><a href="https://www.linkedin.com/in/samgreenalaska" target="_blank" rel="noopener">linkedin.com/in/samgreenalaska</a></div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>&copy; 2026 Sam Green. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
