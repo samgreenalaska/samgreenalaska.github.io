@@ -1,0 +1,27 @@
+# Ignore everything by default, then explicitly allow only what should be
+# published. A whitelist fails safe: a new file is invisible to git until it is
+# named here, so nothing lands on GitHub by accident.
+/*
+
+!/.gitignore
+!/404.html
+!/README.md
+!/assets/
+!/capabilities.html
+!/contact.html
+!/css/
+!/dashboard/
+!/dashboard-privacy.html
+!/experience.html
+!/favicon.ico
+!/favicon.svg
+!/index.html
+!/js/
+!/one-pager.html
+!/photos/
+!/privacy.html
+!/projects.html
+!/terms.html
+
+# Excluded by /* above; named only so the intent is obvious to a reader:
+#   publish.bat   private, carried in the workspace's project-docs
