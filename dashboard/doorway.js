@@ -1,11 +1,11 @@
-// Frames the dashboard on Cave and keeps this page's address in step with it.
+// Frames the dashboard on Cavern and keeps this page's address in step with it.
 // Used by dashboard/index.html and by 404.html, which GitHub Pages serves for every
 // path it has no file for, so /dashboard/machines/glados works without a stub page.
 // Address in: /dashboard/<path> here frames <DASH>/dashboard/<path>.
 // Address out: the frame posts its path after each page or swap (static/app.js).
 (function () {
   "use strict";
-  var DASH = "https://cave.tail334c08.ts.net";
+  var DASH = "https://cavern.tail334c08.ts.net";
   var PREFIX = "/dashboard";
   var SAFE = /^\/dashboard(\/[A-Za-z0-9_-]+)*\/?$/;
 
