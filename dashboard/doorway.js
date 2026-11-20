@@ -48,11 +48,11 @@
     frame.src = DASH + path;
   }
 
-  function signIn(how) {
+  function signIn() {
     // Just went to Google and came back still signed out: the browser kept no
     // cookie. Let the login page offer its buttons instead of looping.
     var last = Number(get(TRIED) || 0);
-    if (how === "auto" && Date.now() - last < 60000) {
+    if (Date.now() - last < 60000) {
       frame.contentWindow.postMessage({ dashboardSignIn: "manual" }, DASH);
       return;
     }
@@ -68,7 +68,7 @@
     if (event.origin !== DASH || event.source !== frame.contentWindow) return;
     var data = event.data || {};
     if (data.dashboardSignIn === "auto") {
-      signIn("auto");
+      signIn();
       return;
     }
     var next = data.dashboardPath;
